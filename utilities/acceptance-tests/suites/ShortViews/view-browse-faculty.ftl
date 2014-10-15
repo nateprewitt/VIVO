@@ -2,7 +2,7 @@
 
 <#import "lib-properties.ftl" as p>
 
-<li class="individual" role="listitem" role="navigation">
+<li class="individual" role="navigation">
 
 <#if (individual.thumbUrl)??>
     <img src="${individual.thumbUrl}" width="90" alt="${individual.name}" />

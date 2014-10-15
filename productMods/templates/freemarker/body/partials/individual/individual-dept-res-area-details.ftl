@@ -10,7 +10,7 @@
         </#list>
 
     <section id="deptResearchAreas">
-        <ul role="list" class="deptDetailsList">
+        <ul class="deptDetailsList">
             <#list deptResearchAreas as resultRow>
 		        <li class="deptDetailsListItem">
 		                <a href="${urls.base}/individual${resultRow["person"]?substring(resultRow["person"]?last_index_of("/"))}" title="${i18n().person_name}">${resultRow["personLabel"]}</a>

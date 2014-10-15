@@ -7,7 +7,7 @@
     <#list classGroups as group>
         <#-- Only display populated class groups -->
         <#if (group.individualCount > 0)>
-            <li role="listitem"><a href="" title="${group.uri}">${group.displayName?capitalize}</a></li>
+            <li><a href="" title="${group.uri}">${group.displayName?capitalize}</a></li>
         </#if>
     </#list>
 </#macro>
@@ -125,7 +125,7 @@
                 <#assign foundClassGroup = true />
                 <#list group.classes as class>
                     <#if (class.individualCount > 0) && (class.uri?contains("AcademicArticle") || class.uri?contains("Book") || class.uri?contains("Chapter") ||class.uri?contains("ConferencePaper") || class.uri?contains("Grant") || class.uri?contains("Report")) >
-                        <li role="listitem">
+                        <li>
                             <span>${class.individualCount!}</span>&nbsp;
                             <a href='${urls.base}/individuallist?vclassId=${class.uri?replace("#","%23")!}'>
                                 <#if class.name?substring(class.name?length-1) == "s">

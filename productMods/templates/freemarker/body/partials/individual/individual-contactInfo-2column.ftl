@@ -36,9 +36,9 @@
         <@p.verboseDisplay phone />
     </#if>
     <#if phone.statements?has_content> <#-- if there are any statements -->
-        <ul id="phone-list" role="list">
+        <ul id="phone-list">
             <#list phone.statements as statement>
-                <li role="listitem" <#if editable>style="padding-left:10px;"</#if>>                           
+                <li <#if editable>style="padding-left:10px;"</#if>>                           
                     ${statement.number!}
                     <@p.editingLinks "${phone.localName}" "${phone.name}" statement editable phone.rangeUri />
                 </li>
@@ -61,9 +61,9 @@
             <@p.verboseDisplay email />
         </#if>
         <#if email.statements?has_content> <#-- if there are any statements -->
-            <ul id="${listId}" role="list">
+            <ul id="${listId}">
                 <#list email.statements as statement>
-                    <li role="listitem" <#if editable>style="padding-left:10px;"</#if>>
+                    <li <#if editable>style="padding-left:10px;"</#if>>
                         
                         <a class="email" href="mailto:${statement.emailAddress!}" title="${i18n().email}">${statement.emailAddress!}</a>
                         <@p.editingLinks "${email.localName}" "${email.name}" statement editable email.rangeUri />

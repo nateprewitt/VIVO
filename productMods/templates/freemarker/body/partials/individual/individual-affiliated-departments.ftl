@@ -6,7 +6,7 @@
         <h2 id="facultyResearchAreas" class="mainPropGroup">
             ${headingText} 
         </h2>
-        <ul id="individual-hasResearchArea" role="list">
+        <ul id="individual-hasResearchArea">
             <#assign moreDisplayed = false>
             <#list departmentsResults as resultRow>
 		            <li class="raLink">

@@ -10,7 +10,7 @@
         <img id="researchAreaIcon" src="${urls.images}/individual/research-group-icon.png" alt="${i18n().research_areas}" />
         <@p.addLink researchAreas editable /> <@p.verboseDisplay researchAreas />
     </h2>
-    <ul id="individual-${localName}" role="list" >
+    <ul id="individual-${localName}" >
         <@p.objectProperty researchAreas editable />
     </ul> 
 </#if>   

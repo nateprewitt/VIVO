@@ -26,9 +26,9 @@
     <p>${i18n().has_no_webpages}</p>
 </#if>
 
-<ul id="dragDropList" ${ulClass} role="list">
+<ul id="dragDropList" ${ulClass}>
     <#list editConfiguration.pageData.webpages as webpage>
-        <li class="webpage" role="listitem">
+        <li class="webpage">
             <#if webpage.label??>
                 <#assign anchor=webpage.label >
             <#else>

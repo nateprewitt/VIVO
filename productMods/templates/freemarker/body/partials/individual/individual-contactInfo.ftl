@@ -21,9 +21,9 @@
 <#if phone?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
     <@p.addLinkWithLabel phone editable />
     <#if phone.statements?has_content> <#-- if there are any statements -->
-        <ul id="individual-phone" role="list" <#if editable>style="list-style:none;margin-left:0;"</#if>>
+        <ul id="individual-phone" <#if editable>style="list-style:none;margin-left:0;"</#if>>
             <#list phone.statements as statement>
-                <li role="listitem">
+                <li>
                     ${statement.number!}
                     <@p.editingLinks "${phone.localName}" "${phone.name}" statement editable phone.rangeUri />
                 </li>
@@ -43,9 +43,9 @@
     <#if email?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
         <@p.addLinkWithLabel email editable label/>
         <#if email.statements?has_content> <#-- if there are any statements -->
-            <ul id="${listId}" class="individual-emails" role="list" <#if editable>style="list-style:none;margin-left:0;"</#if>>
+            <ul id="${listId}" class="individual-emails" <#if editable>style="list-style:none;margin-left:0;"</#if>>
                 <#list email.statements as statement>
-                    <li role="listitem">
+                    <li>
                         <a class="email" href="mailto:${statement.emailAddress!}" title="${i18n().email}">${statement.emailAddress!}</a>
                         <@p.editingLinks "${email.localName}" "${email.name}" statement editable email.rangeUri />
                     </li>

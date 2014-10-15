@@ -109,7 +109,7 @@
                     <h2 id="webpage" class="mainPropGroup">${i18n().websites} <@p.addLink webpage editable ""/></h2>
                     <@p.verboseDisplay webpage />
                     <#assign localName = webpage.localName>
-                    <ul id="individual-${localName}" role="list">
+                    <ul id="individual-${localName}">
                         <@p.objectProperty webpage editable />
                     </ul>
                 </#if>

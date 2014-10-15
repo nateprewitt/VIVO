@@ -120,7 +120,7 @@
                     </#if>
                     <@p.verboseDisplay webpage />
                     <#assign localName = webpage.localName>
-                    <ul id="individual-${localName}" class="individual-webpage" role="list">
+                    <ul id="individual-${localName}" class="individual-webpage">
                         <@p.objectProperty webpage editable "propStatement-webpage-quickview.ftl"/>
                     </ul>
                 </#if>
@@ -146,12 +146,12 @@
                 <#assign subclasses = geographicFocus.subclasses>
                 <#list subclasses as subclass>
                     <#assign subclassName = subclass.name!>
-                    <ul id="individual-${localName}" role="list">
+                    <ul id="individual-${localName}">
                         <@p.objectPropertyList geographicFocus editable subclass.statements geographicFocus.template/>
                     </ul>
                 </#list>
             <#else>
-                <ul id="individual-${localName}" role="list">
+                <ul id="individual-${localName}">
                     <@p.objectProperty geographicFocus editable />
                 </ul>
             </#if>
@@ -165,7 +165,7 @@
                 <h2 id="webpage" class="mainPropGroup">${i18n().websites} <@p.addLink webpage editable ""/></h2>
                 <@p.verboseDisplay webpage />
                 <#assign localName = webpage.localName>
-                <ul id="individual-${localName}" role="list">
+                <ul id="individual-${localName}">
                     <@p.objectProperty webpage editable />
                 </ul>
             </#if>
